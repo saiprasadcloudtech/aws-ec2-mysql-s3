@@ -2,6 +2,8 @@
 sudo apt-get update   # to update the ubuntu server 
 sudo apt-get install mysql-client    # Need to install sql-client in ubuntu server which will interact with the backend Mysql server ( Amazon RDS) 
 
+# create a bucket under the same region 
+
 # For python and related frameworks below python modules needs to be installed 
 sudo apt-get install python3
 sudo apt-get install python3-flask
@@ -14,6 +16,21 @@ mysql> create database <name>;                # create a database
 mysql> use <database_name>                    # select the database where you want to create table
 mysql> create table <table_name>(column_1 varchar(20),column_2 varchar(20).......)
 
+# update the config file inside the repository
+customhost = "employee.coimdn2g2ddd.us-east-1.rds.amazonaws.com"
+customuser = "cloudtechsai"
+custompass = "roopa007"
+customdb = "employee"
+custombucket = "addemployee2021"
+customregion = "us-east-1"
 
-# for running application
-sudo python3 Empapp.py
+# We need to clone this github repository with web server for deployment 
+ubuntu$ git clone https://github.com/saiprasadcloudtech/aws-ec2-mysql-s3.git        # cloning github with web server to deploy the code and app
+
+# assign a role to ec2 to that it can access s3
+
+# create hosted zone under route 53 
+# for domain name you can create a free domain from freenom.com
+# To connect your free domain to route 53 you must copy all the nameservers created under hosted zone record set and paste in into freenom dashboard 
+# Now to connect route 53 to web server create 2 record set under hosted zone ( one without www and other with www prefix )
+# once the above steps are complete , you can access the website using the free domain name which we created 
