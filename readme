@@ -1,4 +1,10 @@
-# Once we launch a ubuntu server as a web server below are the steps to be performed in it.
+# Project Description : This project consist of a employee database website which will store the employee details in amazon s3 (objects) and RDS (entries).
+once we establish connectivity between the webserver and s3 and also webserver and RDS, We create hosted zone using route 53. Finally you connect your domain to
+route 53 using metadata and subsiquently connect route 53 to web server.
+
+Below are the step by step procedure :
+
+# After we create ubuntu server (EC2 instance ) as a web server below are the commands to be performed.
 sudo apt-get update   # to update the ubuntu server 
 sudo apt-get install mysql-client    # Need to install sql-client in ubuntu server which will interact with the backend Mysql server ( Amazon RDS) 
 
