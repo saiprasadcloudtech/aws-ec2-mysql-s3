@@ -1,5 +1,5 @@
-# Project Description : This project consist of a employee database website which will store the employee details in amazon s3 (objects) and RDS (entries).
-once we establish connectivity between the webserver and s3 and also webserver and RDS, We create hosted zone using route 53. Finally you connect your domain to
+# Project Description : This project consist of a employee database website which collects the employee details and store them in amazon s3 (objects) and 
+RDS (entries).once you establish connectivity between the webserver and s3 and also webserver and RDS, you create hosted zone using route 53. Finally you connect your domain to
 route 53 using metadata and subsiquently connect route 53 to web server.
 
 Below are the step by step procedure :
