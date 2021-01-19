@@ -1,13 +1,19 @@
-sudo apt-get update
-# For Sql-client
-sudo apt-get install mysql-client
+# Once we launch a ubuntu server as a web server below are the steps to be performed in it.
+sudo apt-get update   # to update the ubuntu server 
+sudo apt-get install mysql-client    # Need to install sql-client in ubuntu server which will interact with the backend Mysql server ( Amazon RDS) 
 
-# For python and related frameworks
-
+# For python and related frameworks below python modules needs to be installed 
 sudo apt-get install python3
 sudo apt-get install python3-flask
 sudo apt-get install python3-pymysql
 sudo apt-get install python3-boto3
+
+# we need to create database and tables inside the database using the below command 
+mysql -h <database-endpoint> -u <username> -p # login to database from ubuntu server using mysql client 
+mysql> create database <name>;                # create a database 
+mysql> use <database_name>                    # select the database where you want to create table
+mysql> create table <table_name>(column_1 varchar(20),column_2 varchar(20).......)
+
 
 # for running application
 sudo python3 Empapp.py
